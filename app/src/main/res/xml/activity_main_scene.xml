@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        motion:autoTransition="animateToStart"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+    </Transition>
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/player2"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"
+            motion:layout_constraintHorizontal_bias="0.498" />
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="480dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/player" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pole"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp" />
+        <Constraint
+            android:layout_height="50dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="164dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.485"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="50dp"
+            android:id="@+id/boll" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/boll">
+            <Layout        android:layout_width="40dp"
+                android:layout_height="40dp"
+                motion:layout_constraintBottom_toBottomOf="@+id/player"/>
+        </Constraint>
+    </ConstraintSet></MotionScene>
